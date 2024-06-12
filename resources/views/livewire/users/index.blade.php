@@ -23,6 +23,8 @@
                             <th>ID</th>
                             <th>Name</th>
                             <th>Email</th>
+                            <th>Unit</th>
+                            <th>Roles</th>
                             <th>Created</th>
                             <th>Actions</th>
                         </tr>
@@ -33,6 +35,8 @@
                                 <td>{{ ++$index }}</td>
                                 <td>{{ $listUser->name }}</td>
                                 <td>{{ $listUser->email }}</td>
+                                <td>{{ $listUser->unit->name }}</td>
+                                <td>{{ $listUser->roles->first()->name }}</td>
                                 <td>{{ $listUser->created_at }}</td>
                                 <td>
                                     <button type="button" wire:click="editStudent({{ $listUser->id }})"

@@ -12,4 +12,9 @@ class Unit extends Model
     protected $fillable = [
         'name', 'keterangan'
     ];
+
+    public function user()
+    {
+        return $this->hasMany('App\Models\User');
+    }
 }

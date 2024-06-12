@@ -30,6 +30,11 @@ class User extends Authenticatable
         'active'
     ];
 
+    public function unit()
+    {
+        return $this->belongsTo('App\Models\Unit');
+    }
+
     /**
      * The attributes that should be hidden for serialization.
      *
